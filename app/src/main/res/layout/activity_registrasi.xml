@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrasiActivity"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/R_img1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gambar1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/txt_registrasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registrasi_penduduk"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/black"
+        android:layout_marginTop="50sp"/>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txt_registrasi"
+        android:layout_marginTop="20sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25sp"
+        android:layout_marginTop="20sp">
+    
+        <EditText
+            android:id="@+id/edit_nik"
+            android:layout_width="match_parent"
+            android:layout_height="57sp"
+            android:hint="@string/masukan_nik"
+            android:inputType="number"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/white"
+            android:paddingStart="10sp"
+            android:fontFamily="@font/poppinsregular"
+            android:autofillHints=""
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/edit_nama"
+            android:layout_width="match_parent"
+            android:layout_height="57sp"
+            android:hint="@string/masukan_nama"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/white"
+            android:paddingStart="10sp"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginTop="10sp"
+            tools:ignore="RtlSymmetry"
+            android:autofillHints=""
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/txt_pilih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pilih_jenis_kelamin"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingStart="10sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10sp"
+            tools:ignore="RtlSymmetry" />
+
+        <RadioGroup
+            android:id="@+id/jk_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10sp"
+            android:orientation="horizontal"
+            tools:ignore="RtlSymmetry">
+
+            <RadioButton
+                android:id="@+id/rd_laki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/laki_laki"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <RadioButton
+                android:id="@+id/rd_perempuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/perempuan"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppinsregular"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/edit_tempat_lahir"
+            android:layout_width="match_parent"
+            android:layout_height="57sp"
+            android:hint="@string/masukan_tempat_lahir"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/white"
+            android:paddingStart="10sp"
+            android:inputType="text"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginTop="10sp"
+            tools:ignore="RtlSymmetry"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/txt_tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingStart="10sp"
+            android:text="@string/masukan_tanggal_lahir"
+            tools:ignore="RtlSymmetry" />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            android:maxDate="@{java.lang.System.currentTimeMillis() - (1000 * 60 * 60 * 24 * 365 * 18)}" />
+
+        <EditText
+            android:id="@+id/edit_alamat"
+            android:layout_width="match_parent"
+            android:layout_height="57sp"
+            android:hint="@string/alamat"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/white"
+            android:paddingStart="10sp"
+            android:inputType="text"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginTop="10sp"
+            tools:ignore="RtlSymmetry"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="57sp"
+            android:hint="@string/masukan_email"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/white"
+            android:paddingStart="10sp"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginTop="10sp"
+            tools:ignore="RtlSymmetry"
+            android:inputType="textEmailAddress"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/edit_nomor_telp"
+            android:layout_width="match_parent"
+            android:layout_height="57sp"
+            android:hint="@string/masukan_nomor_telepon"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/white"
+            android:paddingStart="10sp"
+            android:inputType="phone"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginTop="10sp"
+            tools:ignore="RtlSymmetry"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_marginTop="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="250sp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_shape"
+            android:text="@string/submit"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30sp"
+            android:fontFamily="@font/poppinsbold"/>
+
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
